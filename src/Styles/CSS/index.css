@@ -1,10 +1,10 @@
 .header {
-  background-color: #7c6a4d;
-  position: fixed;
+  background-color: #a1816c;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 65px;
 }
 .header h1 {
   color: white;
@@ -14,11 +14,13 @@
 }
 .header .header-nav {
   margin-left: 20px;
-  height: 55px;
   display: flex;
   flex-direction: row;
 }
-.header .header-nav div {
+.header .header-nav a {
+  text-decoration: none;
+}
+.header .header-nav a div {
   width: 100px;
   display: flex;
   flex-direction: column;
@@ -30,16 +32,22 @@
   cursor: pointer;
   transition: 0.5s;
 }
-.header .header-nav div p {
+.header .header-nav a div p {
   padding: 2px;
   color: transparent;
   font-size: 12px;
 }
-.header .header-nav div:hover {
-  background-color: #8d8067;
+.header .header-nav a div:hover {
+  background-color: #ab8e7c;
 }
-.header .header-nav div:hover p {
+.header .header-nav a div:hover p {
   color: white;
+}
+
+.main {
+  margin: 0 auto;
+  width: 90%;
+  min-height: 100vh;
 }
 
 /*# sourceMappingURL=index.css.map */

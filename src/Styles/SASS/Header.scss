@@ -1,11 +1,11 @@
 @use 'colors';
 .header {
-  background-color: #7c6a4d;
-  position: fixed;
+  background-color: colors.$color-three;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 65px;
   h1 {
     color: white;
     margin-right: 25px;
@@ -14,30 +14,32 @@
   }
   .header-nav {
     margin-left: 20px;
-    height: 55px;
     display: flex;
     flex-direction: row;
-    div {
-      width: 100px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding-top: 10px;
-      font-size: 35px;
-      color: white;
-      cursor: pointer;
-      p {
-        padding: 2px;
-        color: transparent;
-        font-size: 12px;
-      }
-      transition: .5s;
-    }
-    div:hover {
-      background-color: #8d8067;
-      p {
+    a {
+      text-decoration: none;
+      div {
+        width: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 10px;
+        font-size: 35px;
         color: white;
+        cursor: pointer;
+        p {
+          padding: 2px;
+          color: transparent;
+          font-size: 12px;
+        }
+        transition: .5s;
+      }
+      div:hover {
+        background-color: lighten($color: colors.$color-three, $amount: 5);
+        p {
+          color: white;
+        }
       }
     }
   }

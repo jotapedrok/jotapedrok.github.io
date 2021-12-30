@@ -1,11 +1,13 @@
 import './App.css';
 import './Styles/CSS/index.css';
 import Header from './Components/Header';
+import Main from './Components/Main';
 
 function App() {
   return (
     <div className="App">
       <Header />
+      <Main />
       {/* <body>
         <h1 id="nome">João Pedro de Aguiar Santos</h1>
         <ul>

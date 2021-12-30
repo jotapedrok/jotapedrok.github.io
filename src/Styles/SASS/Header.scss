@@ -1,7 +1,17 @@
+@use 'colors';
 .header {
-  background-color: #807461;
+  background-color: #7c6a4d;
   position: fixed;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h1 {
+    color: white;
+    margin-right: 25px;
+    text-transform: uppercase;
+    cursor: unset;
+  }
   .header-nav {
     margin-left: 20px;
     height: 55px;
@@ -25,7 +35,7 @@
       transition: .5s;
     }
     div:hover {
-      background-color: #645a48;
+      background-color: #8d8067;
       p {
         color: white;
       }

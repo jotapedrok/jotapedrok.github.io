@@ -20,6 +20,9 @@ const Header = () => {
           <p>Interesses</p>
         </div>
       </nav>
+      <div className="header-name">
+        <h1>Jota Aguiar</h1>
+      </div>
     </div>
   )
 }

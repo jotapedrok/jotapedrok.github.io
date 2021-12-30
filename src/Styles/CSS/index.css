@@ -1,0 +1,36 @@
+.header {
+  background-color: #807461;
+  position: fixed;
+  width: 100%;
+}
+.header .header-nav {
+  margin-left: 20px;
+  height: 55px;
+  display: flex;
+  flex-direction: row;
+}
+.header .header-nav div {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  font-size: 35px;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.header .header-nav div p {
+  padding: 2px;
+  color: transparent;
+  font-size: 12px;
+}
+.header .header-nav div:hover {
+  background-color: #645a48;
+}
+.header .header-nav div:hover p {
+  color: white;
+}
+
+/*# sourceMappingURL=index.css.map */

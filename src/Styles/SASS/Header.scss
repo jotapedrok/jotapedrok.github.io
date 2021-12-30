@@ -1,0 +1,34 @@
+.header {
+  background-color: #807461;
+  position: fixed;
+  width: 100%;
+  .header-nav {
+    margin-left: 20px;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    div {
+      width: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 10px;
+      font-size: 35px;
+      color: white;
+      cursor: pointer;
+      p {
+        padding: 2px;
+        color: transparent;
+        font-size: 12px;
+      }
+      transition: .5s;
+    }
+    div:hover {
+      background-color: #645a48;
+      p {
+        color: white;
+      }
+    }
+  }
+}

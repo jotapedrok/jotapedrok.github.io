@@ -33,13 +33,17 @@
           padding: 2px;
           color: transparent;
           font-size: 12px;
+          transition: color .5s ease;
         }
         transition: .5s;
-      }
-      div:hover {
-        background-color: lighten($color: colors.$color-three, $amount: 5);
-        p {
-          color: white;
+        &:hover {
+          background-color: lighten($color: colors.$color-three, $amount: 5);
+          p {
+            color: white;
+          }
+        }
+        &.active {
+          background-color: lighten($color: colors.$color-three, $amount: 5);
         }
       }
     }

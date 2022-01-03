@@ -1,7 +1,108 @@
+<<<<<<< HEAD
+=======
+.header {
+  background-color: #a1816c;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+.header h1 {
+  color: white;
+  margin-right: 25px;
+  text-transform: uppercase;
+  cursor: unset;
+}
+.header .header-nav {
+  height: 100%;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: row;
+}
+.header .header-nav a {
+  text-decoration: none;
+}
+.header .header-nav a div {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.header .header-nav a div p {
+  padding: 2px;
+  color: transparent;
+  font-size: 12px;
+  transition: color 0.5s ease;
+}
+@media (max-width: 770px) {
+  .header .header-nav a div p {
+    color: white;
+  }
+}
+.header .header-nav a div:hover {
+  background-color: #ab8e7c;
+}
+.header .header-nav a div:hover p {
+  color: white;
+}
+.header .header-nav a div.active {
+  background-color: #ab8e7c;
+}
+
+@media (max-width: 770px) {
+  .header-name {
+    display: none;
+  }
+}
+
+>>>>>>> main
 .main {
   margin: 15px auto;
   width: 90%;
   min-height: 100vh;
 }
 
+<<<<<<< HEAD
+=======
+img {
+  border-radius: 50%;
+  transition: 1s;
+  height: 300px;
+}
+img:hover {
+  border-radius: 20px;
+}
+@media (max-width: 770px) {
+  img {
+    height: 180px;
+  }
+}
+
+h2 {
+  font-size: 50px;
+}
+@media (max-width: 770px) {
+  h2 {
+    font-size: 35px;
+  }
+}
+
+.about-content {
+  width: 60%;
+  margin-top: 20px;
+}
+@media (max-width: 770px) {
+  .about-content {
+    width: 80%;
+  }
+}
+
+>>>>>>> main
 /*# sourceMappingURL=index.css.map */

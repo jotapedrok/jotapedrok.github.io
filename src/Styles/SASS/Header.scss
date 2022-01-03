@@ -1,4 +1,6 @@
 @use 'colors';
+@use 'mediaQuery';
+
 .header {
   background-color: colors.$color-three;
   width: 100%;
@@ -34,6 +36,9 @@
           color: transparent;
           font-size: 12px;
           transition: color .5s ease;
+          @include mediaQuery.mobile {
+            color: white;
+          }
         }
         transition: .5s;
         &:hover {
@@ -47,5 +52,11 @@
         }
       }
     }
+  }
+}
+
+.header-name {
+  @include mediaQuery.mobile {
+    display: none;
   }
 }

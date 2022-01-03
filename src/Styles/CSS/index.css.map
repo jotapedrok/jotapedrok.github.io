@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"version":3,"sourceRoot":"","sources":["../SASS/Main.scss"],"names":[],"mappings":"AAAA;EACE;EACA;EACA","file":"index.css"}
+=======
+{"version":3,"sourceRoot":"","sources":["../SASS/Header.scss","../SASS/_colors.scss","../SASS/_mediaQuery.scss","../SASS/Main.scss","../SASS/About.scss"],"names":[],"mappings":"AAGA;EACE,kBCFY;EDGZ;EACA;EACA;EACA;EACA;;AACA;EACE;EACA;EACA;EACA;;AAEF;EACE;EACA;EACA;EACA;;AACA;EACE;;AACA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EAUA;;AATA;EACE;EACA;EACA;EACA;;AEpCR;EFgCM;IAMI;;;AAIJ;EACE;;AACA;EACE;;AAGJ;EACE;;;AEjDR;EFwDF;IAEI;;;;AG3DJ;EACE;EACA;EACA;;;ACDF;EACE;EACA;EACA;;AACA;EACE;;AFNF;EECF;IAQI;;;;AAIJ;EACE;;AFdA;EEaF;IAGG;;;;AAIH;EACE;EACA;;AFtBA;EEoBF;IAII","file":"index.css"}
+>>>>>>> main

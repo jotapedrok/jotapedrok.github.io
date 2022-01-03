@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/jotapedrok.github.io/static/css/main.283c23ad.css",
+    "main.js": "/jotapedrok.github.io/static/js/main.91da98ba.js",
+    "index.html": "/jotapedrok.github.io/index.html",
+    "main.283c23ad.css.map": "/jotapedrok.github.io/static/css/main.283c23ad.css.map",
+    "main.91da98ba.js.map": "/jotapedrok.github.io/static/js/main.91da98ba.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.283c23ad.css",
+    "static/js/main.91da98ba.js"
+  ]
+}

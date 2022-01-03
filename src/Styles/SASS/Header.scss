@@ -36,6 +36,9 @@
           color: transparent;
           font-size: 12px;
           transition: color .5s ease;
+          @include mediaQuery.mobile {
+            color: white;
+          }
         }
         transition: .5s;
         &:hover {

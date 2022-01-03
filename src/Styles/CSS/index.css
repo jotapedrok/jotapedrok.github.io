@@ -39,6 +39,11 @@
   font-size: 12px;
   transition: color 0.5s ease;
 }
+@media (max-width: 770px) {
+  .header .header-nav a div p {
+    color: white;
+  }
+}
 .header .header-nav a div:hover {
   background-color: #ab8e7c;
 }

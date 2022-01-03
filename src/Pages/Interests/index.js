@@ -3,7 +3,7 @@ import React from "react";
 const Interests = () => {
   return (
     <div className="interests">
-       <h2>Canal de Interesse</h2>
+       <h2>Interesses</h2>
         <a
           href="https://www.youtube.com/user/Desimpedidos/featured"
           rel="noreferrer"

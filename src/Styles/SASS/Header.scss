@@ -1,4 +1,6 @@
 @use 'colors';
+@use 'mediaQuery';
+
 .header {
   background-color: colors.$color-three;
   width: 100%;
@@ -47,5 +49,11 @@
         }
       }
     }
+  }
+}
+
+.header-name {
+  @include mediaQuery.mobile {
+    display: none;
   }
 }

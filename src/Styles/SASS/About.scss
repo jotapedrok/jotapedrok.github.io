@@ -1,3 +1,5 @@
+@use 'mediaQuery';
+
 img {
   border-radius: 50%;
   transition: 1s;
@@ -5,13 +7,22 @@ img {
   &:hover {
     border-radius: 20px;
   }
+  @include mediaQuery.mobile {
+    height: 180px;
+  }
 }
 
 h2 {
   font-size: 50px;
+  @include mediaQuery.mobile {
+   font-size: 35px;
+  }
 }
 
 .about-content {
-  width: 40%;
+  width: 60%;
   margin-top: 20px;
+  @include mediaQuery.mobile {
+    width: 80%;
+  }
 }

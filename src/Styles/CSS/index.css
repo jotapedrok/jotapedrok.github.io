@@ -64,10 +64,6 @@ img:hover {
   border-radius: 20px;
 }
 
-.baba:checked ~ h2 {
-  color: blue;
-}
-
 h2 {
   font-size: 50px;
 }

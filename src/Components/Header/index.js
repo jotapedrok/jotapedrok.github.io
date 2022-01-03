@@ -1,7 +1,7 @@
 import React from "react";
 import { SiAboutdotme } from 'react-icons/si';
 import { GiSkills } from 'react-icons/gi';
-import { AiFillHeart } from 'react-icons/ai';
+import { AiFillHeart, AiOutlineProject } from 'react-icons/ai';
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -53,6 +53,15 @@ const Header = () => {
           >
             <AiFillHeart />
             <p>Interesses</p>
+          </div>
+        </Link>
+        <Link to="/projects">
+          <div
+            className="nav-item project-nav"
+            onClick={ handleClick }
+          >
+            <AiOutlineProject />
+            <p>Projetos</p>
           </div>
         </Link>
       </nav>

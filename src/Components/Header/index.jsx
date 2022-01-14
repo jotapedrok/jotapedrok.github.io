@@ -2,7 +2,7 @@ import React from 'react';
 import { SiAboutdotme } from 'react-icons/si';
 import { GiSkills } from 'react-icons/gi';
 import {
-  AiFillHeart,
+  // AiFillHeart,
   AiOutlineProject,
   // AiFillHome,
 } from 'react-icons/ai';
@@ -61,7 +61,7 @@ export default function Header() {
             <p>Habilidades</p>
           </button>
         </Link>
-        <Link to="/interests">
+        {/* <Link to="/interests">
           <button
             type="button"
             className="nav-item interests-nav"
@@ -70,7 +70,7 @@ export default function Header() {
             <AiFillHeart />
             <p>Interesses</p>
           </button>
-        </Link>
+        </Link> */}
         <Link to="/projects">
           <button
             type="button"

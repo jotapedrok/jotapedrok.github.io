@@ -1,0 +1,38 @@
+@use 'colors';
+
+.skills {
+  margin-top: 30px;
+  &-title {
+    font-size: 70px;
+    color: colors.$color-three;
+    margin-left: 40px;
+  }
+  &-content{
+    background-color: colors.$color-three;
+    padding: 40px 50px;
+    width: 55vw;
+    border-radius: 14px;
+    &-list{
+      list-style: none;
+      &-item {
+        color: colors.$color-six;
+        font-weight: bold;
+        font-size: 22px;
+        margin-bottom: 10px;
+      }
+      &-item::before{
+        content: ('');
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjAuMjg1IDJsLTExLjI4NSAxMS41NjctNS4yODYtNS4wMTEtMy43MTQgMy43MTYgOSA4LjcyOCAxNS0xNS4yODV6Ii8+PC9zdmc+");
+        background-size: 18px;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: inline-block;
+        margin-right: 10px;
+        border-radius: 7px;
+        width: 20px;
+        height: 20px;
+        background-color: colors.$color-six;
+      }
+    }
+  }
+}

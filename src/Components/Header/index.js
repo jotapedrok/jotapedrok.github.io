@@ -1,7 +1,11 @@
 import React from 'react';
 import { SiAboutdotme } from 'react-icons/si';
 import { GiSkills } from 'react-icons/gi';
-import { AiFillHeart, AiOutlineProject, AiFillHome } from 'react-icons/ai';
+import {
+  AiFillHeart,
+  AiOutlineProject,
+  // AiFillHome,
+} from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 
 export default function Header() {
@@ -27,7 +31,7 @@ export default function Header() {
   return (
     <div className="header">
       <nav className="header-nav">
-        <Link to="/">
+        {/* <Link to="/">
           <button
             type="button"
             className="nav-item home-nav active"
@@ -36,8 +40,8 @@ export default function Header() {
             <AiFillHome />
             <p>Home</p>
           </button>
-        </Link>
-        <Link to="/about">
+        </Link> */}
+        <Link to="/">
           <button
             type="button"
             className="nav-item about-me-nav"

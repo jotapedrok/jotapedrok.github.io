@@ -16,8 +16,10 @@
     }
   }
   &-content {
+    margin: 20px auto;
     width: 90%;
-    display: grid;
-    grid-template-columns: 400px 400px 400px 400px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
 }

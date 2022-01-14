@@ -9,8 +9,7 @@ function About() {
           <div className="about-top-image-container-bg" />
           <img
             src={me}
-            alt="João Pedro sorrindo olhando para baixo com uma câmera no pescoço"
-            id="mypic"
+            alt="Jota Aguiar"
           />
         </div>
         <div className="about-top-name-container">
@@ -18,6 +17,7 @@ function About() {
           <h4>Desenvolvedor Web</h4>
           <h6>Frontend</h6>
         </div>
+        <div className="space" />
       </div>
       <div className="about-content">
         <div className="about-content-text-container">

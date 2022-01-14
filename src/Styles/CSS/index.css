@@ -71,18 +71,18 @@
   position: relative;
 }
 .about-top-image-container img {
-  width: 400px;
+  width: 420px;
   border-radius: 7px;
   margin-left: 20px;
 }
 .about-top-image-container-bg {
-  width: 380px;
-  height: 380px;
+  width: 350px;
+  height: 350px;
   background-color: #a1816c;
   border-radius: 7px;
   position: absolute;
-  left: 70px;
-  top: -7px;
+  left: 60px;
+  top: 20px;
   z-index: -99999;
 }
 .about-top-name-container {
@@ -105,6 +105,9 @@
 }
 .about-top-name-container h6 {
   font-size: 15px;
+}
+.about-top .space {
+  width: 10px;
 }
 .about-content {
   width: 697px;
@@ -270,9 +273,11 @@ a {
   font-weight: bold;
 }
 .projects-content {
+  margin: 20px auto;
   width: 90%;
-  display: grid;
-  grid-template-columns: 400px 400px 400px 400px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .project-details {

@@ -10,18 +10,18 @@
     &-image-container {
       position: relative;
       img {
-        width: 400px;
+        width: 420px;
         border-radius: 7px;
         margin-left: 20px;
       }
       &-bg {
-        width: 380px;
-        height: 380px;
+        width: 350px;
+        height: 350px;
         background-color: colors.$color-three;
         border-radius: 7px;
         position: absolute;
-        left: 70px;
-        top: -7px;
+        left: 60px;
+        top: 20px;
         z-index: -99999;
       }
     }
@@ -45,6 +45,9 @@
       h6 {
         font-size: 15px;
       }
+    }
+    .space {
+      width: 10px;
     }
   }
   &-content {

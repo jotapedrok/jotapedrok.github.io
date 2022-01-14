@@ -21,7 +21,9 @@
 .header .header-nav a {
   text-decoration: none;
 }
-.header .header-nav a div {
+.header .header-nav a button {
+  border: none;
+  background-color: transparent;
   width: 100px;
   display: flex;
   flex-direction: column;
@@ -33,24 +35,24 @@
   cursor: pointer;
   transition: 0.5s;
 }
-.header .header-nav a div p {
+.header .header-nav a button p {
   padding: 2px;
   color: transparent;
   font-size: 12px;
   transition: color 0.5s ease;
 }
 @media (max-width: 770px) {
-  .header .header-nav a div p {
+  .header .header-nav a button p {
     color: white;
   }
 }
-.header .header-nav a div:hover {
+.header .header-nav a button:hover {
   background-color: #ab8e7c;
 }
-.header .header-nav a div:hover p {
+.header .header-nav a button:hover p {
   color: white;
 }
-.header .header-nav a div.active {
+.header .header-nav a button.active {
   background-color: #ab8e7c;
 }
 

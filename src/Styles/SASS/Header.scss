@@ -21,7 +21,9 @@
     flex-direction: row;
     a {
       text-decoration: none;
-      div {
+      button {
+        border: none;
+        background-color: transparent;
         width: 100px;
         display: flex;
         flex-direction: column;

@@ -1,20 +1,20 @@
-import React from "react";
+import React from 'react';
 import { SiAboutdotme } from 'react-icons/si';
 import { GiSkills } from 'react-icons/gi';
-import { AiFillHeart, AiOutlineProject } from 'react-icons/ai';
-import { Link } from "react-router-dom";
+import { AiFillHeart, AiOutlineProject, AiFillHome } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
-const Header = () => {
+export default function Header() {
   const handleClick = ({ target }) => {
     const arrayItens = Array.from(document.querySelector('.header-nav').children);
     arrayItens.forEach((element) => {
       const div = element.firstChild;
-      if(div.classList.contains('active')) {
-        div.classList.remove('active'); 
+      if (div.classList.contains('active')) {
+        div.classList.remove('active');
       }
     });
-    if(!target.classList.contains('nav-item')) {
-      if(!target.parentNode.classList.contains('nav-item')) {
+    if (!target.classList.contains('nav-item')) {
+      if (!target.parentNode.classList.contains('nav-item')) {
         target.parentNode.parentNode.classList.add('active');
       } else {
         target.parentNode.classList.add('active');
@@ -22,47 +22,60 @@ const Header = () => {
     } else {
       target.classList.add('active');
     }
-    ;
-  }
+  };
 
   return (
     <div className="header">
       <nav className="header-nav">
         <Link to="/">
-          <div
-            className="nav-item about-me-nav active"
-            onClick={ handleClick }
+          <button
+            type="button"
+            className="nav-item home-nav active"
+            onClick={handleClick}
+          >
+            <AiFillHome />
+            <p>Home</p>
+          </button>
+        </Link>
+        <Link to="/about">
+          <button
+            type="button"
+            className="nav-item about-me-nav"
+            onClick={handleClick}
           >
             <SiAboutdotme />
             <p>Sobre Mim</p>
-          </div>
+          </button>
         </Link>
         <Link to="/skills">
-          <div
+          <button
+            type="button"
             className="nav-item skills-nav"
-            onClick={ handleClick }
+            onClick={handleClick}
           >
             <GiSkills />
             <p>Habilidades</p>
-          </div>
+          </button>
         </Link>
         <Link to="/interests">
-          <div
+          <button
+            type="button"
             className="nav-item interests-nav"
-            onClick={ handleClick }
+            onClick={handleClick}
           >
             <AiFillHeart />
             <p>Interesses</p>
-          </div>
+          </button>
         </Link>
         <Link to="/projects">
-          <div
+          <button
+            type="button"
             className="nav-item project-nav"
-            onClick={ handleClick }
+            onClick={handleClick}
           >
             <AiOutlineProject />
             <p>Projetos</p>
-          </div>
+          </button>
         </Link>
       </nav>
       <div
@@ -71,7 +84,5 @@ const Header = () => {
         <h1>Jota Aguiar</h1>
       </div>
     </div>
-  )
+  );
 }
-
-export default Header;

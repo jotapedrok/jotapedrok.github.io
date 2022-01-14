@@ -1,0 +1,23 @@
+@use 'colors';
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  margin: 20px auto;
+  &-title-container {
+    font-size: 30px;
+    text-transform: uppercase;
+    color: colors.$color-three;
+    h1 {
+      font-weight: bold;
+    }
+  }
+  &-content {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 400px 400px 400px 400px;
+  }
+}

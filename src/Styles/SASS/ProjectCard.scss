@@ -1,0 +1,66 @@
+@use 'colors';
+a {
+  text-decoration: none;
+}
+.project-card {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: colors.$color-four;
+  padding-bottom: 20px;
+  margin: 20px;
+  width: 250px;
+  border-radius: 17px;
+  position: relative;
+
+  .div-upper-project {
+    opacity: 0;
+    position: absolute;
+    top: 5px;
+    background-color: transparentize(colors.$color-five, $amount: 0.4%);
+    width: 100%;
+    height: 100%;
+    border-radius: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    text-align: center;
+    color: transparentize(white, $amount: 0.2%);
+    text-decoration: underline 1.5px;
+    transition: opacity .5s, top .3s;
+  }
+
+  .div-upper-project:hover {
+    opacity: 100;
+    top: 0;
+
+  }
+
+  &-image-container {
+    img {
+      width: 250px;
+      height: 220px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 17px 17px 0 0;
+      margin-bottom: 7px;
+    }
+  }
+  &-content {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 15px;
+      text-align: center;
+    }
+  }
+}

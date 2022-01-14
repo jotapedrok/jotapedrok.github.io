@@ -5,6 +5,7 @@ import About from '../../Pages/About';
 // import Interests from '../../Pages/Interests';
 import Projects from '../../Pages/Projects';
 import Skills from '../../Pages/Skills';
+import ProjectDetails from '../ProjectDetails';
 
 function Main() {
   return (
@@ -15,6 +16,7 @@ function Main() {
         <Route path="/skills" element={<Skills />} />
         {/* <Route path="/interests" element={<Interests />} /> */}
         <Route path="/projects" element={<Projects />} />
+        <Route path="/projects/:id" element={<ProjectDetails />} />
         <Route path="*" element={<h1 className="not-found">404! Ops... Page not Found!</h1>} />
       </Routes>
     </div>

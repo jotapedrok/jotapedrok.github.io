@@ -1,5 +1,43 @@
-@mixin mobile {
-  @media (max-width: 770px) {
-    @content;
-  }
-}
+@use 'sass:map';
+
+//Para Mobile First
+
+$breakpoint : (
+  'phone': 360px,
+  'tablet': 768px,
+  'desktop': 1366px,
+  'LGdesktop': 1920px,
+);
+
+@mixin variable-mobile($min-w, $max-w) {
+  @media (min-width: #{$min-w}px) and (max-width: #{$max-w}px) {
+    @content
+  };
+};
+
+@mixin mobile($key) {
+  $size: map.get($breakpoint, $key);
+  @if $key == 'phone' {
+    @media (min-width: $size) {
+      @content
+    }
+  };
+  
+  @if $key == 'tablet' {
+    @media (min-width: $size) {
+      @content
+    }
+  };
+  
+  @if $key == 'desktop' {
+    @media (min-width: $size) {
+      @content
+    }
+  };
+  
+  @if $key == 'LGdesktop' {
+    @media (min-width: $size) {
+      @content
+    }
+  };
+};

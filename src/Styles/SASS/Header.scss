@@ -3,20 +3,20 @@
 
 .header {
   background-color: colors.$color-three;
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
+  height: 65px;
   h1 {
     color: white;
     margin-right: 25px;
     text-transform: uppercase;
     cursor: unset;
+    display: none;
   }
   .header-nav {
     height: 100%;
-    margin-left: 20px;
     display: flex;
     flex-direction: row;
     a {
@@ -24,7 +24,8 @@
       button {
         border: none;
         background-color: transparent;
-        width: 100px;
+        width: 70px;
+        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -38,9 +39,6 @@
           color: transparent;
           font-size: 12px;
           transition: color .5s ease;
-          @include mediaQuery.mobile {
-            color: white;
-          }
         }
         transition: .5s;
         &:hover {
@@ -57,8 +55,3 @@
   }
 }
 
-.header-name {
-  @include mediaQuery.mobile {
-    display: none;
-  }
-}

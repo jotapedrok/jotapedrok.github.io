@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400&display=swap");
 .header {
   background-color: #a1816c;
   width: 100vw;
@@ -227,16 +226,17 @@ a {
 }
 
 .project-card {
-  color: white;
+  color: #fde6d6;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #573930;
+  background-color: #a1816c;
   padding-bottom: 20px;
-  margin: 20px;
-  width: 250px;
-  border-radius: 17px;
+  margin-top: 2.5rem;
+  width: 15rem;
+  border-radius: 1.1rem;
   position: relative;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.342);
 }
 .project-card .div-upper-project {
   opacity: 0;
@@ -245,7 +245,7 @@ a {
   background-color: rgba(40, 40, 40, 0.6);
   width: 100%;
   height: 100%;
-  border-radius: 17px;
+  border-radius: 1.1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -260,7 +260,7 @@ a {
   top: 0;
 }
 .project-card-image-container img {
-  width: 250px;
+  width: 15rem;
   height: 220px;
   object-fit: cover;
   object-position: center top;
@@ -288,23 +288,21 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80vw;
-  margin: 20px auto;
 }
 .projects-title-container {
-  font-size: 30px;
-  text-transform: uppercase;
+  font-size: 1.5rem;
   color: #a1816c;
+  margin-top: 1.1rem;
 }
 .projects-title-container h1 {
   font-weight: bold;
 }
 .projects-content {
-  margin: 20px auto;
-  width: 90%;
+  margin-top: 1rem;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  margin-bottom: 2rem;
 }
 
 .project-details {

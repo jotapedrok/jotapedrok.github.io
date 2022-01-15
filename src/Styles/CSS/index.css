@@ -445,8 +445,7 @@ a {
 @media (min-width: 768px) {
   .project-card {
     min-height: 26rem;
-    margin-top: 2rem;
-    margin-right: 2rem;
+    margin: 1rem;
     width: 18rem;
   }
 }
@@ -533,6 +532,7 @@ a {
   }
 }
 .projects-content {
+  max-width: 90%;
   margin-top: 1rem;
   display: flex;
   justify-content: center;
@@ -541,7 +541,7 @@ a {
 }
 @media (min-width: 768px) {
   .projects-content {
-    margin-top: 0;
+    margin-top: 1.5rem;
   }
 }
 
@@ -557,15 +557,32 @@ a {
   align-items: center;
   position: relative;
 }
+@media (min-width: 768px) {
+  .project-details-header {
+    flex-direction: row;
+  }
+}
 .project-details-header-thumb-container img {
   width: 100vw;
   box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.342);
+}
+@media (min-width: 768px) {
+  .project-details-header-thumb-container img {
+    width: 23rem;
+    box-shadow: 4px 7px 4px 0px rgba(0, 0, 0, 0.267);
+    border-radius: 0 1rem 1rem 0;
+  }
 }
 .project-details-header-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100vw;
+}
+@media (min-width: 768px) {
+  .project-details-header-content {
+    width: 100%;
+  }
 }
 .project-details-header-content .check-box-container {
   font-size: 18px;

@@ -18,13 +18,14 @@ function Skills() {
       <div className="skills-content" data-aos="fade-right">
         <ul className="skills-content-list">
           <em>
-            <li className="skills-content-list-item">HTML</li>
-            <li className="skills-content-list-item">CSS</li>
-            <li className="skills-content-list-item">JS</li>
-            <li className="skills-content-list-item">REACT</li>
-            <li className="skills-content-list-item">SASS</li>
-            <li className="skills-content-list-item">BOOTSTRAP</li>
-            <li className="skills-content-list-item">JEST</li>
+            <li className="skills-content-list-learned-item">HTML</li>
+            <li className="skills-content-list-learned-item">CSS</li>
+            <li className="skills-content-list-learned-item">JS</li>
+            <li className="skills-content-list-learned-item">REACT</li>
+            <li className="skills-content-list-learned-item">SASS</li>
+            <li className="skills-content-list-learned-item">BOOTSTRAP</li>
+            <li className="skills-content-list-learned-item">JEST</li>
+            <li className="skills-content-list-to-learn-item">REACT NATIVE</li>
           </em>
         </ul>
       </div>

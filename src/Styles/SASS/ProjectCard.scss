@@ -1,4 +1,5 @@
 @use 'colors';
+@use 'mediaQuery';
 a {
   text-decoration: none;
 }
@@ -12,8 +13,15 @@ a {
   margin-top: 2.5rem;
   width: 15rem;
   border-radius: 1.1rem;
+  min-height: 23rem;
   position: relative;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.342);
+  @include mediaQuery.query('tablet') {
+    min-height: 26rem;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    width: 18rem;
+  }
 
   .div-upper-project {
     opacity: 0;
@@ -47,6 +55,9 @@ a {
       object-position: center top;
       border-radius: 17px 17px 0 0;
       margin-bottom: 7px;
+      @include mediaQuery.query('tablet') {
+        width: 18rem;
+      }
     }
   }
   &-content {
@@ -58,10 +69,16 @@ a {
     h1 {
       font-size: 20px;
       margin-bottom: 10px;
+      @include mediaQuery.query('tablet') {
+        font-size: 1.4rem;
+      }
     }
     p {
       font-size: 15px;
       text-align: center;
+      @include mediaQuery.query('tablet'){
+        font-size: 1.2rem;
+      }
     }
   }
 }

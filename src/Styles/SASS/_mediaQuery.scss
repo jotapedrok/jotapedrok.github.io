@@ -5,8 +5,8 @@
 $breakpoint : (
   'phone': 360px,
   'tablet': 768px,
-  'desktop': 1366px,
-  'LGdesktop': 1920px,
+  'desktop': 1241px,
+  'LGdesktop': 1745px,
 );
 
 @mixin variable-query($min-w, $max-w) {

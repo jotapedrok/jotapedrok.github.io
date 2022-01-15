@@ -17,6 +17,10 @@
       margin-top: 1.5rem;
       width: 85vw;
     }
+    @include mediaQuery.query('desktop') {
+      flex-direction: row;
+      width: 90vw;
+    }
     &-image-container {
       display: flex;
       flex-direction: column;
@@ -33,6 +37,9 @@
           margin-right: 0;
           margin-left: 2rem;
         }
+        @include mediaQuery.query('desktop') {
+          width: 24rem;
+        }
       }
       &-bg {
         width: 13.5rem;
@@ -47,6 +54,10 @@
           width: 18rem;
           height: 19.5rem;
           left: 3.7rem;
+        }
+        @include mediaQuery.query('desktop') {
+          width: 20rem;
+          height: 21.5rem;
         }
       }
     }
@@ -63,6 +74,11 @@
       @include mediaQuery.query('tablet') {
         margin-top: 55px;
       }
+      @include mediaQuery.query('desktop'){
+        margin-top: 0;
+        height: 21.5rem;
+        margin-bottom: .3rem;
+      }
       h2 {
         font-size: 5rem;
         margin-bottom: 11px;
@@ -71,11 +87,17 @@
           margin-top: 1.4rem;
           margin-bottom: 2.5rem;
         }
+        @include mediaQuery.query('desktop') {
+          font-size: 6.5rem;
+        }
       }
       h4 {
         font-size: 1.7rem;
         @include mediaQuery.query('tablet') {
           font-size: 2.1rem;
+        }
+        @include mediaQuery.query('desktop') {
+          font-size: 2.4rem;
         }
       }
       h6 {
@@ -89,11 +111,9 @@
     }
   }
   &-content {
-    // width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    // justify-content: center;
     margin: 20px 0 40px;
     line-height: 32px;
     font-size: 18px;
@@ -103,11 +123,20 @@
         height: 37rem;
       }
     }
+    @include mediaQuery.query('desktop') {
+      width: 80vw;
+    }
+    @include mediaQuery.query('LGdesktop'){
+      width: 60vw;
+    }
     div {
       width: 90%;
       margin-top: 30px;
       @include mediaQuery.query('tablet') {
         width: 80%;
+      }
+      @include mediaQuery.query('desktop') {
+        width: 60%;
       }
     }
     .text-left {
@@ -120,6 +149,9 @@
       @include mediaQuery.query('tablet') {
         right: 7rem;
         width: 95%;
+      }
+      @include mediaQuery.query('desktop') {
+        right: 12rem;
       }
       a {
         color: colors.$color-two;
@@ -142,6 +174,12 @@
         margin: 0;
         top: 2.5rem;
         left: 1.25rem;
+        @include mediaQuery.query('desktop') {
+          font-size: 1.4rem;
+          width: 18rem;
+          top: 1.5rem;
+          left: 2.5rem;
+        }
       }
     }
     .text-right {
@@ -155,10 +193,15 @@
       border-radius: 0.5rem;
       position: relative;
       @include mediaQuery.query('tablet') {
+        text-align: left;
         left: 8.4rem;
         width: 95%;
         bottom: 9rem;
         z-index: 2;
+      }
+      @include mediaQuery.query('desktop') {
+        left: 13.5rem;
+        bottom: 12rem;
       }
       &-container {
         position: absolute;
@@ -166,6 +209,11 @@
         margin: 0;
         right: 2rem;
         bottom: 3rem;
+        @include mediaQuery.query('desktop') {
+          font-size: 1.4rem;
+          width: 18rem;
+          bottom: 2.8rem;
+        }
       }
     }
     &-social-media {
@@ -195,6 +243,7 @@
           &:focus {
             outline: none;
           }
+          cursor: pointer;
         }
         a:focus {
           outline: none;

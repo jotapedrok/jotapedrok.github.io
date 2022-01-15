@@ -6,21 +6,25 @@
   justify-content: center;
   align-items: center;
 }
-.header .space {
-  width: 15px;
-  height: 5px;
+@media (min-width: 768px) {
+  .header {
+    justify-content: space-between;
+  }
 }
 .header h1 {
-  color: white;
+  color: #fde6d6;
   margin-right: 25px;
   text-transform: uppercase;
   cursor: unset;
   display: none;
 }
+@media (min-width: 768px) {
+  .header h1 {
+    display: inherit;
+  }
+}
 .header .header-nav {
-  height: 100%;
   display: flex;
-  flex-direction: row;
 }
 .header .header-nav a {
   text-decoration: none;
@@ -28,7 +32,7 @@
 .header .header-nav a button {
   border: none;
   background-color: transparent;
-  width: 70px;
+  width: 5rem;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -36,9 +40,15 @@
   justify-content: center;
   padding-top: 10px;
   font-size: 30px;
-  color: white;
+  color: #fde6d6;
   cursor: pointer;
   transition: 0.5s;
+}
+@media (min-width: 768px) {
+  .header .header-nav a button {
+    font-size: 40px;
+    width: 6.5rem;
+  }
 }
 .header .header-nav a button p {
   padding: 2px;
@@ -46,14 +56,22 @@
   font-size: 12px;
   transition: color 0.5s ease;
 }
+@media (min-width: 768px) {
+  .header .header-nav a button p {
+    font-size: 0.9rem;
+  }
+}
 .header .header-nav a button:hover {
   background-color: #ab8e7c;
 }
 .header .header-nav a button:hover p {
-  color: white;
+  color: #fde6d6;
 }
 .header .header-nav a button.active {
   background-color: #ab8e7c;
+}
+.header .header-nav a button.active p {
+  color: #fde6d6;
 }
 
 .main {

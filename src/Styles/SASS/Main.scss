@@ -1,5 +1,8 @@
+@use 'colors';
+
 .main {
-  margin: 15px auto;
-  width: 90%;
+  margin: 0 auto;
+  width: 100vw;
   min-height: 100vh;
+  background-color: #fbede3;
 }

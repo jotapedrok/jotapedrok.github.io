@@ -11,7 +11,7 @@
   }
   &-content{
     background-color: colors.$color-three;
-    padding: 40px 60px;
+    padding: 40px 50px;
     width: 90%;
     border-radius: 1rem;
     margin-top: 30px;
@@ -20,7 +20,7 @@
       &-item {
         color: colors.$color-six;
         font-weight: bold;
-        font-size: 22px;
+        font-size: 1.3rem;
         margin-bottom: 10px;
       }
       &-item::before{

@@ -1,26 +1,14 @@
+import Aos from 'aos';
 import React, { useEffect } from 'react';
 import me from '../../images/imag.png';
+import 'aos/dist/aos.css';
 
 function About() {
-  const addScrollAtributte = (item, windowHeight, side) => {
-    const distance = item.getBoundingClientRect().top;
-    if (distance < windowHeight) {
-      if (!item.classList.contains(side)) {
-        item.classList.add(side);
-      }
-    } else {
-      item.classList.remove(side);
-    }
-  };
-
   useEffect(() => {
     const windowHeight = window.innerHeight;
     if (windowHeight < 1366) {
-      const secondText = document.querySelector('.text-right');
-      const firstText = document.querySelector('.text-left');
-      window.addEventListener('scroll', () => {
-        addScrollAtributte(firstText, windowHeight, 'left');
-        addScrollAtributte(secondText, windowHeight, 'right');
+      Aos.init({
+        duration: 500,
       });
     }
   }, []);
@@ -44,7 +32,7 @@ function About() {
       </div>
       <div className="about-content">
         <div className="about-content-text-container">
-          <div className="text-left">
+          <div className="text-left" data-aos="fade-left">
             <div className="text-left-container">
               <p>
                 Me chamo
@@ -62,7 +50,7 @@ function About() {
               </p>
             </div>
           </div>
-          <div className="text-right">
+          <div className="text-right" data-aos="fade-right">
             <div className="text-right-container">
               <p>
                 Foco minha carreira no desenvolvimento

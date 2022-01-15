@@ -19,6 +19,9 @@
     &-thumb-container {
       img {
         width: 100vw;
+        height: 17.7rem;
+        object-fit: cover;
+        object-position: top;
         box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.342);
         @include mediaQuery.query('tablet') {
           width: 23rem;
@@ -26,6 +29,10 @@
           object-fit: cover;
           box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.267);
           border-radius: 0 1rem 1rem 0;
+        }
+        @include mediaQuery.query('desktop') {
+          width: 31rem;
+          height: 27rem;
         }
       }
     }
@@ -42,6 +49,7 @@
         position: absolute;
         top: 18rem;
         right: 5px;
+        background-color: colors.$color-six;
         input {
           margin-left: 1rem;
         }
@@ -49,6 +57,15 @@
           font-size: 1.4rem;
           bottom: 0;
           left: 0;
+          background-color: colors.$color-six;
+          border-radius: 0 1rem 1rem 0;
+          height: 2rem;
+          width: 16rem;
+        }
+        @include mediaQuery.query('desktop') {
+          bottom: initial;
+          left: 0;
+          top: 24rem;
         }
       }
       h1 {
@@ -62,6 +79,9 @@
           margin-left: 1.3rem;
           font-size: 5rem;
         }
+        @include mediaQuery.query('desktop') {
+          margin-left: 3rem;
+        }
       }
       &-description {
         width: 95%;
@@ -74,6 +94,11 @@
         @include mediaQuery.query('tablet') {
           width: 94%;
           font-size: 1.6rem;
+        }
+        @include mediaQuery.query('desktop') {
+          width: 90%;
+          min-height: 19rem;
+          padding: 2rem;
         }
       }
       &-links {
@@ -124,6 +149,9 @@
         grid-template-columns: 40vw 40vw;
         grid-column-gap: 1.5rem;
         padding: 1.5rem;
+      }
+      @include mediaQuery.query('desktop') {
+        grid-template-columns: 25vw 25vw 25vw;
       }
       img {
         width: 100%;

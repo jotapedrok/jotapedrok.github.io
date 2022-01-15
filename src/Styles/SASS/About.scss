@@ -73,6 +73,8 @@
     }
     .text-left {
       color: colors.$color-one;
+      transform: translateX(-104%);
+      opacity: 0;
       width: 100%;
       height: 90vw;
       background-color: lighten(colors.$color-one, $amount: 40);
@@ -101,9 +103,16 @@
         left: 1.25rem;
       }
     }
+    .left {
+      transform: translateX(0);
+      opacity: 100%;
+      transition: .5s ease;
+    }
     .text-right {
       color: colors.$color-six;
       text-align: right;
+      transform: translateX(104%);
+      opacity: 0;
       font-size: 20px;
       width: 100%;
       height: 90vw;
@@ -118,6 +127,11 @@
         right: 2rem;
         bottom: 3rem;
       }
+    }
+    .right {
+      transform: translateX(0);
+      opacity: 100%;
+      transition: .5s ease;
     }
   }
 }

@@ -13,7 +13,7 @@ function Skills() {
             <li className="skills-content-list-item">REACT</li>
             <li className="skills-content-list-item">SASS</li>
             <li className="skills-content-list-item">BOOTSTRAP</li>
-            <li className="skills-content-list-item">Produção Audio Visual</li>
+            <li className="skills-content-list-item">JEST</li>
           </em>
         </ul>
       </div>

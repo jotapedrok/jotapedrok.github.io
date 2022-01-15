@@ -1,7 +1,30 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import me from '../../images/imag.png';
 
 function About() {
+  const addScrollAtributte = (item, windowHeight, side) => {
+    const distance = item.getBoundingClientRect().top;
+    if (distance < windowHeight) {
+      if (!item.classList.contains(side)) {
+        item.classList.add(side);
+      }
+    } else {
+      item.classList.remove(side);
+    }
+  };
+
+  useEffect(() => {
+    const windowHeight = window.innerHeight;
+    if (windowHeight < 1366) {
+      const secondText = document.querySelector('.text-right');
+      const firstText = document.querySelector('.text-left');
+      window.addEventListener('scroll', () => {
+        addScrollAtributte(firstText, windowHeight, 'left');
+        addScrollAtributte(secondText, windowHeight, 'right');
+      });
+    }
+  }, []);
+
   return (
     <div className="about">
       <div className="about-top">

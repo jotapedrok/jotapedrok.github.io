@@ -9,13 +9,13 @@ $breakpoint : (
   'LGdesktop': 1920px,
 );
 
-@mixin variable-mobile($min-w, $max-w) {
+@mixin variable-query($min-w, $max-w) {
   @media (min-width: #{$min-w}px) and (max-width: #{$max-w}px) {
     @content
   };
 };
 
-@mixin mobile($key) {
+@mixin query($key) {
   $size: map.get($breakpoint, $key);
   @if $key == 'phone' {
     @media (min-width: $size) {

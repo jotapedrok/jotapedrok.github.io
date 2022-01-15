@@ -336,6 +336,11 @@
   color: #a1816c;
   margin-top: 20px;
 }
+@media (min-width: 768px) {
+  .skills-title {
+    font-size: 4.5rem;
+  }
+}
 .skills-content {
   background-color: #a1816c;
   padding: 40px 50px;
@@ -343,14 +348,29 @@
   border-radius: 1rem;
   margin-top: 30px;
 }
+@media (min-width: 768px) {
+  .skills-content {
+    width: 65%;
+  }
+}
 .skills-content-list {
   list-style: none;
+}
+@media (min-width: 768px) {
+  .skills-content-list {
+    margin-left: 1.4rem;
+  }
 }
 .skills-content-list-learned-item {
   color: #fde6d6;
   font-weight: bold;
   font-size: 1.3rem;
   margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+  .skills-content-list-learned-item {
+    font-size: 1.7rem;
+  }
 }
 .skills-content-list-learned-item::before {
   content: "";
@@ -365,11 +385,23 @@
   width: 20px;
   height: 20px;
 }
+@media (min-width: 768px) {
+  .skills-content-list-learned-item::before {
+    background-size: 2rem;
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+}
 .skills-content-list-to-learn-item {
   color: #fde6d6;
   font-weight: bold;
   font-size: 1.3rem;
   margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+  .skills-content-list-to-learn-item {
+    font-size: 1.7rem;
+  }
 }
 .skills-content-list-to-learn-item::before {
   content: "";
@@ -382,6 +414,14 @@
   border-radius: 0.2rem;
   width: 18px;
   height: 18px;
+}
+@media (min-width: 768px) {
+  .skills-content-list-to-learn-item::before {
+    border: solid 2px #fde6d6;
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-right: 15px;
+  }
 }
 
 a {

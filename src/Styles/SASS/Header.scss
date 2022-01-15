@@ -5,9 +5,12 @@
   background-color: colors.$color-three;
   width: 100vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  height: 65px;
+  .space {
+    width: 15px;
+    height: 5px;
+  }
   h1 {
     color: white;
     margin-right: 25px;

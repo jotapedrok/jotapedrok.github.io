@@ -2,9 +2,12 @@
   background-color: #a1816c;
   width: 100vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  height: 65px;
+}
+.header .space {
+  width: 15px;
+  height: 5px;
 }
 .header h1 {
   color: white;

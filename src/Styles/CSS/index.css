@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400&display=swap");
 .header {
   background-color: #a1816c;
   width: 100vw;
@@ -189,6 +190,7 @@
   justify-content: space-around;
   align-items: center;
   text-align: center;
+  position: relative;
 }
 .about-content-social-media h1 {
   color: #282828;
@@ -199,8 +201,31 @@
   align-items: center;
   justify-content: space-around;
 }
+.about-content-social-media-icons button {
+  background-color: transparent;
+  border: none;
+}
+.about-content-social-media-icons button:focus {
+  outline: none;
+}
+.about-content-social-media-icons a:focus {
+  outline: none;
+  border: none;
+}
 .about-content-social-media-icons img {
   width: 3rem;
+}
+.about-content-social-media-icons .email-copied {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #573930;
+  position: absolute;
+  background-color: #ffffffa8;
+  box-shadow: 0 3px 4px #888888;
+  padding: 4px 6px;
+  border-radius: 0.3rem;
+  bottom: 3rem;
+  right: -1rem;
 }
 
 .skills {

@@ -22,7 +22,11 @@ export default function ProjectDetails() {
           <div className="project-details">
             <div className="project-details-header">
               <div className="project-details-header-thumb-container">
-                <a href={project.projectLink}>
+                <a
+                  href={project.projectLink}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img src={project.thumb} alt={`${project.name} thumbail`} />
                 </a>
               </div>
@@ -58,12 +62,16 @@ export default function ProjectDetails() {
                   <a
                     data-aos="fade-right"
                     href={project.projectLink}
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     Acesse o App
                   </a>
                   <a
                     href={project.repositoryLink}
                     data-aos="fade-left"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     <img src={githubIcon} alt="github icon" />
                   </a>

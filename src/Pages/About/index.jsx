@@ -1,5 +1,6 @@
 import Aos from 'aos';
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import clipboardCopy from 'clipboard-copy';
 import instaIcon from '../../images/instaIcon.svg';
 import linkedinIcon from '../../images/linkedinIcon.svg';
 import outlookIcon from '../../images/outlookIcon.svg';
@@ -8,6 +9,9 @@ import me from '../../images/imag.png';
 import 'aos/dist/aos.css';
 
 function About() {
+  const ONE_SECONDS = 1000;
+  const timeoutEmailRef = useRef();
+  const [isCopied, setIsCopied] = useState(false);
   useEffect(() => {
     const windowHeight = window.innerHeight;
     if (windowHeight < 1366) {
@@ -15,6 +19,20 @@ function About() {
         duration: 400,
       });
     }
+  }, []);
+
+  const handleClick = () => {
+    const email = 'joaopedroasant@outlook.com';
+    clipboardCopy(email);
+    setIsCopied(true);
+    timeoutEmailRef.current = setTimeout(() => {
+      setIsCopied(false);
+    }, ONE_SECONDS);
+  };
+
+  useEffect(() => () => {
+    clearInterval(timeoutEmailRef.current);
+    setIsCopied(false);
   }, []);
 
   return (
@@ -50,7 +68,7 @@ function About() {
               <p>
                 Sou do Rio de Janeiro, Brasil. Estudante de Desenvolvimento de Softwares da
                 {' '}
-                <a href="https://www.betrybe.com/"><strong>Trybe</strong></a>
+                <a href="https://www.betrybe.com/" target="_blank" rel="noreferrer"><strong>Trybe</strong></a>
               </p>
             </div>
           </div>
@@ -69,32 +87,56 @@ function About() {
           </div>
         </div>
         <div className="about-content-social-media">
-          <h1>Você pode encontrar aqui:</h1>
+          <h1>Você pode me encontrar aqui:</h1>
           <div className="about-content-social-media-icons">
-            <img
-              src={instaIcon}
-              alt="instaIcon"
-              data-aos="fade-up"
-              data-aos-offset="50"
-            />
-            <img
-              src={githubIcon}
-              alt="githubIcon"
-              data-aos="fade-up"
-              data-aos-offset="50"
-            />
-            <img
-              src={linkedinIcon}
-              alt="linkedinIcon"
-              data-aos="fade-up"
-              data-aos-offset="50"
-            />
-            <img
-              src={outlookIcon}
-              alt="outlookIcon"
-              data-aos="fade-up"
-              data-aos-offset="50"
-            />
+            <a
+              href="https://www.instagram.com/joaopedroaguiar_/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src={instaIcon}
+                alt="instaIcon"
+                data-aos="fade-up"
+                data-aos-offset="50"
+              />
+            </a>
+            <a
+              href="https://github.com/jotapedrok"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={githubIcon}
+                alt="githubIcon"
+                data-aos="fade-up"
+                data-aos-offset="50"
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/joaopedroasant/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={linkedinIcon}
+                alt="linkedinIcon"
+                data-aos="fade-up"
+                data-aos-offset="50"
+              />
+            </a>
+            <button
+              type="button"
+              onClick={handleClick}
+            >
+              <img
+                src={outlookIcon}
+                alt="outlookIcon"
+                data-aos="fade-up"
+                data-aos-offset="50"
+              />
+              {isCopied && <p className="email-copied">Email Copiado</p>}
+            </button>
           </div>
         </div>
       </div>

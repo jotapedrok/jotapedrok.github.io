@@ -183,6 +183,25 @@
   right: 2rem;
   bottom: 3rem;
 }
+.about-content-social-media {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+.about-content-social-media h1 {
+  color: #282828;
+}
+.about-content-social-media-icons {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.about-content-social-media-icons img {
+  width: 3rem;
+}
 
 .skills {
   display: flex;

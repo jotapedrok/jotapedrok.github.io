@@ -1,5 +1,9 @@
 import Aos from 'aos';
 import React, { useEffect } from 'react';
+import instaIcon from '../../images/instaIcon.svg';
+import linkedinIcon from '../../images/linkedinIcon.svg';
+import outlookIcon from '../../images/outlookIcon.svg';
+import githubIcon from '../../images/githubIcon.svg';
 import me from '../../images/imag.png';
 import 'aos/dist/aos.css';
 
@@ -8,7 +12,7 @@ function About() {
     const windowHeight = window.innerHeight;
     if (windowHeight < 1366) {
       Aos.init({
-        duration: 500,
+        duration: 400,
       });
     }
   }, []);
@@ -62,6 +66,35 @@ function About() {
                 continuar a me desenvolver como DEV.
               </p>
             </div>
+          </div>
+        </div>
+        <div className="about-content-social-media">
+          <h1>Você pode encontrar aqui:</h1>
+          <div className="about-content-social-media-icons">
+            <img
+              src={instaIcon}
+              alt="instaIcon"
+              data-aos="fade-up"
+              data-aos-offset="50"
+            />
+            <img
+              src={githubIcon}
+              alt="githubIcon"
+              data-aos="fade-up"
+              data-aos-offset="50"
+            />
+            <img
+              src={linkedinIcon}
+              alt="linkedinIcon"
+              data-aos="fade-up"
+              data-aos-offset="50"
+            />
+            <img
+              src={outlookIcon}
+              alt="outlookIcon"
+              data-aos="fade-up"
+              data-aos-offset="50"
+            />
           </div>
         </div>
       </div>

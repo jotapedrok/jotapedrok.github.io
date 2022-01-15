@@ -6,14 +6,15 @@ function Skills() {
   useEffect(() => {
     if (window.innerHeight < 1366) {
       Aos.init({
-        duration: 500,
+        duration: 300,
+        offset: 10,
       });
     }
   }, []);
 
   return (
     <div className="skills">
-      <h2 className="skills-title" data-aos="fade-left">Habilidades</h2>
+      <h2 className="skills-title" data-aos="fade-down">Habilidades</h2>
       <div className="skills-content" data-aos="fade-right">
         <ul className="skills-content-list">
           <em>

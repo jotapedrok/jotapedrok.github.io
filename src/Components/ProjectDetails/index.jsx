@@ -1,8 +1,18 @@
-import React from 'react';
+import Aos from 'aos';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import projects from '../../Data/projectsData';
+import githubIcon from '../../images/githubIcon.svg';
+import 'aos/dist/aos.css';
 
 export default function ProjectDetails() {
+  useEffect(() => {
+    if (window.innerHeight > 1366) {
+      Aos.init({
+        duration: 700,
+      });
+    }
+  }, []);
   const { id } = useParams();
   const project = projects.find((e) => e.id === Number(id));
   return (
@@ -12,7 +22,9 @@ export default function ProjectDetails() {
           <div className="project-details">
             <div className="project-details-header">
               <div className="project-details-header-thumb-container">
-                <img src={project.thumb} alt={`${project.name} thumbail`} />
+                <a href={project.projectLink}>
+                  <img src={project.thumb} alt={`${project.name} thumbail`} />
+                </a>
               </div>
               <div className="project-details-header-content">
                 <h1>{project.name}</h1>
@@ -36,21 +48,41 @@ export default function ProjectDetails() {
                     Browser
                   </label>
                 </div>
-                <div className="project-details-header-content-description">
+                <div
+                  className="project-details-header-content-description"
+                  data-aos="fade-top"
+                >
                   <p>{project.descrioition}</p>
                 </div>
                 <div className="project-details-header-content-links">
-                  <a href={project.projectLink}>Acesse o App</a>
-                  <a href={project.repositoryLink}>Acesse o Repositório</a>
+                  <a
+                    data-aos="fade-right"
+                    href={project.projectLink}
+                  >
+                    Acesse o App
+                  </a>
+                  <a
+                    href={project.repositoryLink}
+                    data-aos="fade-left"
+                  >
+                    <img src={githubIcon} alt="github icon" />
+                  </a>
                 </div>
               </div>
             </div>
             <div className="project-details-gallery">
-              <h1 className="project-details-gellery-title">Galeria do App</h1>
+              <h1
+                className="project-details-gellery-title"
+                data-aos="zoom-out"
+              >
+                Galeria do App
+
+              </h1>
               <div className="project-details-gallery-content">
 
                 {project.pics.map((pic, i) => (
                   <img
+                    data-aos="fade-in"
                     className={`project-pic pic${i + 1}`}
                     src={pic}
                     alt={`project pic ${i + 1}`}

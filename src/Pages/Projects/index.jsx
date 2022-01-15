@@ -1,8 +1,19 @@
-import React from 'react';
+import Aos from 'aos';
+import React, { useEffect } from 'react';
 import ProjectCard from '../../Components/ProjectCard';
 import projects from '../../Data/projectsData';
+import 'aos/dist/aos.css';
 
 function Projects() {
+  useEffect(() => {
+    if (window.innerHeight > 1366) {
+      Aos.init({
+        duration: 200,
+        delay: 0,
+        offset: 30,
+      });
+    }
+  }, []);
   return (
     <div className="projects">
       <div className="projects-title-container">
@@ -10,13 +21,18 @@ function Projects() {
       </div>
       <div className="projects-content">
         {projects.map((project) => (
-          <ProjectCard
+          <div
+            data-aos="zoom-out"
+            className="card-container"
             key={project.id}
-            projectId={project.id}
-            cardDescription={project.shortDescription}
-            cardName={project.name}
-            thumb={project.thumb}
-          />
+          >
+            <ProjectCard
+              projectId={project.id}
+              cardDescription={project.shortDescription}
+              cardName={project.name}
+              thumb={project.thumb}
+            />
+          </div>
         ))}
       </div>
     </div>

@@ -311,73 +311,84 @@ a {
 .project-details {
   display: flex;
   flex-direction: column;
-  width: 90vw;
+  width: 100vw;
+  padding-bottom: 3rem;
 }
 .project-details-header {
-  position: relative;
   display: flex;
-  padding-bottom: 70px;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 }
 .project-details-header-thumb-container img {
-  width: 450px;
+  width: 100vw;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.342);
+}
+.project-details-header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
 }
 .project-details-header-content .check-box-container {
   font-size: 18px;
   position: absolute;
-  top: 5px;
+  top: 18rem;
   right: 5px;
 }
 .project-details-header-content .check-box-container input {
-  margin-left: 20px;
+  margin-left: 1rem;
 }
 .project-details-header-content h1 {
   color: #573930;
   font-weight: bold;
-  font-size: 55px;
-  margin-top: 30px;
+  font-size: 2.5rem;
+  margin-top: 1rem;
 }
 .project-details-header-content-description {
-  width: 600px;
-  text-align: right;
+  width: 95%;
   font-size: 20px;
-  color: #a1816c;
-  position: absolute;
-  bottom: 130px;
-  right: 150px;
+  color: #fde6d6;
+  margin-top: 1.7rem;
+  background-color: #a1816c;
+  padding: 1.5rem;
+  border-radius: 1rem;
 }
 .project-details-header-content-links {
-  position: absolute;
-  bottom: 55px;
-  right: 160px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 1.7rem;
 }
 .project-details-header-content-links a {
   text-decoration: none;
   cursor: pointer;
   font-size: 20px;
-  margin-left: 20px;
 }
 .project-details-gallery {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  margin-top: 2.5rem;
 }
 .project-details-gallery h1 {
-  font-size: 40px;
+  font-size: 2.4rem;
   color: #a1816c;
-  margin: 80px 0;
+  margin-bottom: 2rem;
 }
 .project-details-gallery-content {
   background-color: #8B563D;
-  border-radius: 30px;
-  padding: 70px;
+  border-radius: 1.5rem;
+  padding: 1rem;
   display: grid;
-  grid-template-columns: 500px 500px;
+  grid-template-columns: 80vw;
 }
 .project-details-gallery-content img {
-  width: 300px;
-  margin: 20px auto;
-  border-radius: 7px;
+  width: 100%;
+  margin-bottom: 1.4rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.342);
 }
 
 /*# sourceMappingURL=index.css.map */

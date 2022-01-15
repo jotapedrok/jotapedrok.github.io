@@ -6,7 +6,6 @@ function Skills() {
   useEffect(() => {
     if (window.innerHeight < 1366) {
       Aos.init({
-        delay: 200,
         duration: 500,
       });
     }

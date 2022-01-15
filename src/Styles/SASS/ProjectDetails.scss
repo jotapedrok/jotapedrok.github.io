@@ -1,53 +1,126 @@
 @use 'colors';
+@use 'mediaQuery';
 
 .project-details {
   display: flex;
   flex-direction: column;
-  width: 90vw;
-  // background-color: red;
+  width: 100vw;
+  padding-bottom: 3rem;
   &-header {
-    position: relative;
     display: flex;
-    padding-bottom: 70px;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    @include mediaQuery.query('tablet') {
+      flex-direction: row;
+      align-items: flex-start;
+      margin-top: 1rem;
+    }
     &-thumb-container {
       img {
-        width: 450px;
+        width: 100vw;
+        height: 17.7rem;
+        object-fit: cover;
+        object-position: top;
+        box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.342);
+        @include mediaQuery.query('tablet') {
+          width: 23rem;
+          height: 20rem;
+          object-fit: cover;
+          box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.267);
+          border-radius: 0 1rem 1rem 0;
+        }
+        @include mediaQuery.query('desktop') {
+          width: 31rem;
+          height: 27rem;
+        }
       }
     }
     &-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100vw;
+      @include mediaQuery.query('tablet') {
+        width: 100%;
+      }
       .check-box-container {
         font-size: 18px;
         position: absolute;
-        top: 5px;
+        top: 18rem;
         right: 5px;
+        background-color: colors.$color-six;
         input {
-          margin-left: 20px;
+          margin-left: 1rem;
+        }
+        @include mediaQuery.query('tablet') {
+          font-size: 1.4rem;
+          bottom: 0;
+          left: 0;
+          background-color: colors.$color-six;
+          border-radius: 0 1rem 1rem 0;
+          height: 2rem;
+          width: 16rem;
+        }
+        @include mediaQuery.query('desktop') {
+          bottom: initial;
+          left: 0;
+          top: 24rem;
         }
       }
       h1 {
         color: colors.$color-four;
         font-weight: bold;
-        font-size: 55px;
-        margin-top: 30px;
+        font-size: 2.5rem;
+        margin-top: 1rem;
+        @include mediaQuery.query('tablet') {
+          margin-top: 0;
+          align-self: flex-start;
+          margin-left: 1.3rem;
+          font-size: 5rem;
+        }
+        @include mediaQuery.query('desktop') {
+          margin-left: 3rem;
+        }
       }
       &-description {
-        width: 600px;
-        text-align: right;
-        font-size: 20px;
-        color: colors.$color-three;
-        position: absolute;
-        bottom: 130px;
-        right: 150px;
+        width: 95%;
+        font-size: 1.3rem;
+        color: colors.$color-six;
+        margin-top: 1.7rem;
+        background-color: colors.$color-three;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        @include mediaQuery.query('tablet') {
+          width: 94%;
+          font-size: 1.6rem;
+        }
+        @include mediaQuery.query('desktop') {
+          width: 90%;
+          min-height: 19rem;
+          padding: 2rem;
+        }
       }
       &-links {
-        position: absolute;
-        bottom: 55px;
-        right: 160px;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin-top: 1.7rem;
+        @include mediaQuery.query('tablet') {
+          align-items: center;
+        }
         a {
           text-decoration: none;
           cursor: pointer;
-          font-size: 20px;
-          margin-left: 20px;
+          font-size: 1.3rem;
+          @include mediaQuery.query('tablet') {
+            font-size: 2rem;
+          }
+          @include mediaQuery.query('tablet') {
+            img {
+              width: 6rem;
+            }
+          }
         }
       }
     }
@@ -57,21 +130,34 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    margin-top: 2.5rem;
     h1 {
-      font-size: 40px;
+      font-size: 2.4rem;
       color: colors.$color-three;
-      margin: 80px 0;
+      margin-bottom: 2rem;
+      @include mediaQuery.query('tablet') {
+        font-size: 3.5rem;
+      }
     }
     &-content {
       background-color: colors.$color-two;
-      border-radius: 30px;
-      padding: 70px;
+      border-radius: 1.5rem;
+      padding: 1rem;
       display: grid;
-      grid-template-columns: 500px 500px;
+      grid-template-columns: 80vw;
+      @include mediaQuery.query('tablet') {
+        grid-template-columns: 40vw 40vw;
+        grid-column-gap: 1.5rem;
+        padding: 1.5rem;
+      }
+      @include mediaQuery.query('desktop') {
+        grid-template-columns: 25vw 25vw 25vw;
+      }
       img {
-        width: 300px;
-        margin: 20px auto;
-        border-radius: 7px;
+        width: 100%;
+        margin-bottom: 1.4rem;
+        border-radius: .5rem;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.342);
       }
     }
   }

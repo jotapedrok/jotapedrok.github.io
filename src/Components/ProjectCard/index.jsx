@@ -9,7 +9,10 @@ export default function ProjectCard({
   projectId,
 }) {
   return (
-    <Link className="link-project" to={`/projects/${projectId}`}>
+    <Link
+      className="link-project"
+      to={`/projects/${projectId}`}
+    >
       <div className="project-card">
         <div className="div-upper-project">
           <p>conheça mais deste projeto</p>

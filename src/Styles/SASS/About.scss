@@ -1,101 +1,273 @@
 @use 'colors';
+@use 'mediaQuery';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
 .about {
-  margin-top: 70px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
   &-top {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    &-image-container {
-      position: relative;
-      img {
-        width: 420px;
-        border-radius: 7px;
-        margin-left: 20px;
-      }
-      &-bg {
-        width: 350px;
-        height: 350px;
-        background-color: colors.$color-three;
-        border-radius: 7px;
-        position: absolute;
-        left: 60px;
-        top: 20px;
-        z-index: -99999;
-      }
+    align-items: center;
+    @include mediaQuery.query('tablet') {
+      margin-top: 1.5rem;
+      width: 85vw;
     }
-    &-name-container {
-      background-color: colors.$color-three;
-      border-radius: 7px;
+    @include mediaQuery.query('desktop') {
+      flex-direction: row;
+      width: 90vw;
+    }
+    &-image-container {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 50vw;
-      margin-left: 20px;
-      color: colors.$color-six;
-      h2 {
-        font-size: 100px;
-        margin-bottom: 11px;
+      position: relative;
+      z-index: 1;
+      img {
+        width: 17rem;
+        border-radius: 0.5rem;
+        margin-right: .1rem;
+        @include mediaQuery.query('tablet') {
+          width: 22rem;
+          margin-right: 0;
+          margin-left: 2rem;
+        }
+        @include mediaQuery.query('desktop') {
+          width: 24rem;
+        }
       }
-      h4 {
-        font-size: 25px;
-      }
-      h6 {
-        font-size: 15px;
+      &-bg {
+        width: 13.5rem;
+        height: 15rem;
+        background-color: colors.$color-three;
+        border-radius: 0.5rem;
+        position: absolute;
+        left: 30px;
+        top: 17px;
+        z-index: -1;
+        @include mediaQuery.query('tablet') {
+          width: 18rem;
+          height: 19.5rem;
+          left: 3.7rem;
+        }
+        @include mediaQuery.query('desktop') {
+          width: 20rem;
+          height: 21.5rem;
+        }
       }
     }
-    .space {
-      width: 10px;
+    &-name-container {
+      background-color: colors.$color-three;
+      border-radius: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 90%;
+      color: colors.$color-six;
+      margin-top: 40px;
+      @include mediaQuery.query('tablet') {
+        margin-top: 55px;
+      }
+      @include mediaQuery.query('desktop'){
+        margin-top: 0;
+        height: 21.5rem;
+        margin-bottom: .3rem;
+      }
+      h2 {
+        font-size: 5rem;
+        margin-bottom: 11px;
+        text-align: center;
+        @include mediaQuery.query('tablet') {
+          margin-top: 1.4rem;
+          margin-bottom: 2.5rem;
+        }
+        @include mediaQuery.query('desktop') {
+          font-size: 6.5rem;
+        }
+      }
+      h4 {
+        font-size: 1.7rem;
+        @include mediaQuery.query('tablet') {
+          font-size: 2.1rem;
+        }
+        @include mediaQuery.query('desktop') {
+          font-size: 2.4rem;
+        }
+      }
+      h6 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        @include mediaQuery.query('tablet') {
+          font-size: 1.5rem;
+          margin-bottom: 0.7rem;
+        }
+      }
     }
   }
   &-content {
-    width: 697px;
-    height: 350px;
-    padding: 30px 40px;
-    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0 40px;
     line-height: 32px;
-    position: relative;
     font-size: 18px;
+    z-index: 1;
+    @include mediaQuery.query('tablet') {
+      &-text-container {
+        height: 37rem;
+      }
+    }
+    @include mediaQuery.query('desktop') {
+      width: 80vw;
+    }
+    @include mediaQuery.query('LGdesktop'){
+      width: 60vw;
+    }
+    div {
+      width: 90%;
+      margin-top: 30px;
+      @include mediaQuery.query('tablet') {
+        width: 80%;
+      }
+      @include mediaQuery.query('desktop') {
+        width: 60%;
+      }
+    }
     .text-left {
       color: colors.$color-one;
-      width: 260px;
-      position: absolute;
-      top: 0;
+      width: 100%;
+      height: 19rem;
+      background-color: lighten(colors.$color-one, $amount: 40);
+      border-radius: 0.5rem;
+      position: relative;
+      @include mediaQuery.query('tablet') {
+        right: 7rem;
+        width: 95%;
+      }
+      @include mediaQuery.query('desktop') {
+        right: 12rem;
+      }
       a {
         color: colors.$color-two;
-        text-decoration: none;
+        text-decoration: underline;
+        &::after {
+          content: ('');
+          display: inline-block;
+          background-image: url('https://assets-global.website-files.com/61549abf6fb9ca5e91bc5709/61549abf6fb9ca4630bc5747_Logo.svg');
+          background-position: bottom left;
+          background-repeat: no-repeat;
+          background-size: 30px;
+          width: 52px;
+          height: 20px;
+          margin-left: 4px;
+        }
+      }
+      &-container {
+        position: absolute;
+        width: 15rem;
+        margin: 0;
+        top: 2.5rem;
+        left: 1.25rem;
+        @include mediaQuery.query('desktop') {
+          font-size: 1.4rem;
+          width: 18rem;
+          top: 1.5rem;
+          left: 2.5rem;
+        }
       }
     }
     .text-right {
       color: colors.$color-six;
       text-align: right;
-      width: 260px;
-      position: absolute;
-      right: 80px;
-      bottom: -30px;
       font-size: 20px;
-    }
-    .div-left{
-      width: 370px;
-      height: 370px;
-      background-color: lighten(colors.$color-one, $amount: 40);
-      position: absolute;
-      top: -70px;
-      left: 10px;
-      z-index: -1000;
-      border-radius: 7px;
-    }
-    .div-right{
-      width: 370px;
-      height: 370px;
+      width: 100%;
+      height: 19rem;
       background-color: colors.$color-three;
-      position: absolute;
-      bottom: -100px;
-      right: 30px;
       z-index: -999;
-      border-radius: 7px;
+      border-radius: 0.5rem;
+      position: relative;
+      @include mediaQuery.query('tablet') {
+        text-align: left;
+        left: 8.4rem;
+        width: 95%;
+        bottom: 9rem;
+        z-index: 2;
+      }
+      @include mediaQuery.query('desktop') {
+        left: 13.5rem;
+        bottom: 12rem;
+      }
+      &-container {
+        position: absolute;
+        width: 15rem;
+        margin: 0;
+        right: 2rem;
+        bottom: 3rem;
+        @include mediaQuery.query('desktop') {
+          font-size: 1.4rem;
+          width: 18rem;
+          bottom: 2.8rem;
+        }
+      }
+    }
+    &-social-media {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      h1 {
+        color: colors.$color-five;
+        @include mediaQuery.query('tablet') {
+          font-size: 2.3rem;
+        }
+      }
+      &-icons {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        @include mediaQuery.query('tablet') {
+          justify-content: space-between;
+        }
+        button {
+          background-color: transparent;
+          border: none;
+          &:focus {
+            outline: none;
+          }
+          cursor: pointer;
+        }
+        a:focus {
+          outline: none;
+          border: none;
+        }
+        img {
+          width: 3rem;
+          @include mediaQuery.query('tablet') {
+            width: 3.5rem;
+          }
+        }
+        .email-copied {
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 600;
+          color: colors.$color-four;
+          position: absolute;
+          background-color: #ffffffa8;
+          box-shadow: 0 3px 4px #888888;
+          padding: 4px 6px;
+          border-radius: .3rem;
+          bottom: 3.2rem;
+          right: -.2rem;
+        }
+      }
     }
   }
 }

@@ -5,26 +5,30 @@
   background-color: colors.$color-three;
   width: 100vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  height: 65px;
+  @include mediaQuery.query('tablet') {
+    justify-content: space-between;
+  }
   h1 {
-    color: white;
+    color: colors.$color-six;
     margin-right: 25px;
     text-transform: uppercase;
     cursor: unset;
     display: none;
+    @include mediaQuery.query('tablet') {
+      display: inherit;
+    }
   }
   .header-nav {
-    height: 100%;
+    // height: 100%;
     display: flex;
-    flex-direction: row;
     a {
       text-decoration: none;
       button {
         border: none;
         background-color: transparent;
-        width: 70px;
+        width: 5rem;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -32,23 +36,33 @@
         justify-content: center;
         padding-top: 10px;
         font-size: 30px;
-        color: white;
+        color: colors.$color-six;
         cursor: pointer;
+        @include mediaQuery.query('tablet') {
+          font-size: 40px;
+          width: 6.5rem;
+        }
         p {
           padding: 2px;
           color: transparent;
           font-size: 12px;
           transition: color .5s ease;
+          @include mediaQuery.query('tablet') {
+            font-size: .9rem;
+          }
         }
         transition: .5s;
         &:hover {
           background-color: lighten($color: colors.$color-three, $amount: 5);
           p {
-            color: white;
+            color: colors.$color-six;
           }
         }
         &.active {
           background-color: lighten($color: colors.$color-three, $amount: 5);
+          p {
+            color: colors.$color-six;
+          }
         }
       }
     }

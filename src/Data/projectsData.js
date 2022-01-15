@@ -5,6 +5,7 @@ import imgRecipesApp4 from './images/app-de-receitas/imag4.jpeg';
 import thumbRecipesApp from './images/app-de-receitas/thumb.jpeg';
 import imgPixelArt1 from './images/pixel-art-canva/imag1.jpeg';
 import thumbPixelArt from './images/pixel-art-canva/thumbPixelArt.jpeg';
+import thumStop from './images/stop/thumb.jpeg';
 import imgStop1 from './images/stop/imag1.jpeg';
 import imgStop2 from './images/stop/imag2.jpeg';
 import imgStop3 from './images/stop/imag3.jpeg';
@@ -67,13 +68,14 @@ const projects = [
     id: 3,
     shortDescription: 'Projeto feito em HTML, CSS e JS Puro para jogar STOP com os amigos',
     descrioition: 'Certa vez estava com meus amigos em uma mesa e queriamos jogar stop. Nenhum de nós queria baixar um aplicativo e foi consideravelmente custoso conseguir caneta e papel para todos os amigos. Nesse dia decidi fazer esse app, para que fosse um site de fácil acesso onde poderiamos fazer todas as funções que fariamos no papel, jogando STOP. Esse site tb foi feito no início dos meus aprendizados de programação e é totalmente feito em HTML, CSS e JS Puro. A imagem referente a um menu, no canto superior esquerdo, ainda não é usual',
-    thumb: imgStop1,
+    thumb: thumStop,
     pics: [imgStop1,
       imgStop2,
       imgStop3,
       imgStop4,
       imgStop5,
       imgStop6,
+      thumStop,
     ],
     youtubeLink: '',
     repositoryLink: 'https://github.com/jotapedrok/stop',
